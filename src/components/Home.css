@@ -1,0 +1,122 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f9fafc;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.home-section, .about-section, .projects-section, .contact-section, .footer {
+  background: #ffffff;
+  padding: 60px 30px;
+  margin: 30px auto;
+  border-radius: 12px;
+  max-width: 1000px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.home-section:hover, .about-section:hover, .projects-section:hover, .contact-section:hover {
+  transform: translateY(-5px);
+}
+
+section h2 {
+  font-size: 36px;
+  color: #222;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  background: linear-gradient(to right, #007acc, #61dafb);
+  bottom: -8px;
+  left: 0;
+  border-radius: 2px;
+}
+
+section p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  margin-top: 10px;
+}
+
+.btn, .contact-form button {
+  padding: 12px 28px;
+  background: linear-gradient(to right, #007acc, #61dafb);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 122, 204, 0.3);
+}
+
+.btn:hover, .contact-form button:hover {
+  background: linear-gradient(to right, #61dafb, #007acc);
+  transform: translateY(-2px);
+  color: white;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 90%;
+  max-width: 600px;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: #007acc;
+  box-shadow: 0 0 8px rgba(0, 122, 204, 0.2);
+  outline: none;
+}
+
+.footer {
+  text-align: center;
+  background: #f0f2f5;
+  font-size: 14px;
+  color: #777;
+  border-top: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 60px;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media (max-width: 768px) {
+  section h2 {
+    font-size: 28px;
+  }
+
+  .btn, .contact-form button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .home-section, .about-section, .projects-section, .contact-section, .footer {
+    margin: 20px 15px;
+    padding: 40px 20px;
+  }
+}
